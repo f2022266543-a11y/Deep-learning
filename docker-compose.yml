@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  smart-agriculture:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models/checkpoints:/app/models/checkpoints:ro
+      - ./datasets:/app/datasets:ro
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          memory: 4G

@@ -1,0 +1,40 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Model checkpoints (large files)
+models/checkpoints/*.pt
+models/checkpoints/*.pth
+
+# Datasets (large files)
+datasets/PlantVillage/train/
+datasets/PlantVillage/val/
+datasets/PlantDoc/
+
+# Results (generated)
+results/confusion_matrix/*.png
+results/gradcam/*.png
+results/dcgan/*.png
+results/cgan/*.png
+results/ddpm/*.png
+results/logs/*.png
+results/logs/*.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
